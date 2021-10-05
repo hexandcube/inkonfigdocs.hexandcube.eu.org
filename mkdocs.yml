@@ -1,0 +1,27 @@
+site_name: Inkonfig Docs
+site_url: https://docs.inkonfig.tk
+repo_url: https://github.com/hexandcube/inkonfig
+repo_name: GitHub
+site_description: Documentation for Inkonfig - A Windows configuration script generator
+site_author: Hexandcube
+copyright: Copyright © 2021 Hexandcube 
+markdown_extensions:
+  - admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+plugins:
+    - search
+extra_css:
+  - stylesheets/extra.css
+theme:
+  name: material
+  logo: assets/logo.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+  palette:
+    primary: blue
