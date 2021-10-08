@@ -7,6 +7,14 @@ site_author: Hexandcube
 copyright: Copyright © 2021 Hexandcube 
 markdown_extensions:
   - admonition
+  - attr_list
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -15,6 +23,8 @@ plugins:
 extra_css:
   - stylesheets/extra.css
 theme:
+  font:
+    code: Space Mono
   name: material
   logo: assets/logo.png
   features:
