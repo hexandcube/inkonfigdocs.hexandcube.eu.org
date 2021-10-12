@@ -28,6 +28,7 @@ theme:
   name: material
   logo: assets/logo.png
   features:
+    - toc.integrate
     - navigation.instant
     - navigation.tracking
     - navigation.tabs

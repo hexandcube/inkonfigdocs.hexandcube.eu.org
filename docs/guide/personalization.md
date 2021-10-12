@@ -7,7 +7,7 @@ Changes the computer name. The name can be up to 15 characters long, and can't c
 Example: `Hexandcube-PC`
 
 ```batch
-WMIC computersystem where caption="%computername%" rename "USER_INPUT"
+WMIC computersystem where caption="%computername%" rename "${VALUE}"
 ```
 
 ### Common File Extensions
@@ -112,4 +112,44 @@ System default: `Quick Access`
 
     ```batch
     REG add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d "2" /f
+    ```
+
+## Shell folders
+Changes location of Shell Folders: Documents, Pictures, Videos, Music, Desktop, Downloads
+
+![Desktop Shell Folder Location](/assets/images/docs/shellFolders.png)
+
+=== "Documents"
+
+    ```batch
+    REG add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "{F42EE2D3-909F-4907-8871-4C22FC0BF756}" /t REG_EXPAND_SZ /d ${VALUE} /f
+    REG add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Personal" /t REG_EXPAND_SZ /d ${VALUE} /f
+    ```
+=== "Pictures"
+
+    ```batch
+    REG add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "{0DDD015D-B06C-45D5-8C4C-F59713854639}" /t REG_EXPAND_SZ /d "VALUET" /f
+    REG add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Pictures" /t REG_EXPAND_SZ /d ${VALUE} /f
+    ```
+=== "Videos"
+
+    ```batch
+    REG add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "{35286A68-3C57-41A1-BBB1-0EAE73D76C95}" /t REG_EXPAND_SZ /d ${VALUE} /f
+    REG add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Video" /t REG_EXPAND_SZ /d "${VALUE}" /f
+    ```
+=== "Music"
+
+    ```batch
+    REG add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "{A0C69A99-21C8-4671-8703-7934162FCF1D}" /t REG_EXPAND_SZ /d ${VALUE} /f
+    REG add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "My Music" /t REG_EXPAND_SZ /d ${VALUE} /f
+    ```
+=== "Desktop"
+
+    ```batch
+    REG add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Desktop" /t REG_EXPAND_SZ /d ${VALUE} /f
+    ```
+=== "Downloads"
+
+    ```batch
+    REG add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "{7D83EE9B-2244-4E70-B1F5-5393042AF1E4}" /t REG_EXPAND_SZ /d ${VALUE} /f
     ```
