@@ -114,6 +114,25 @@ System default: `Quick Access`
     REG add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d "2" /f
     ```
 
+### Show Windows version on desktop
+
+Toggles the Windows version watermark on desktop.
+
+![Windows version on desktop](/assets/images/docs/showWindowsVersionOnDesktop.png)
+
+System default: `Disabled`
+
+=== "Enabled"
+
+    ```batch
+    REG add "REG add "HKCU\Control Panel\Desktop" /V PaintDesktopVersion /T REG_DWORD /D 1 /F"
+    ```
+=== "Disabled"
+
+    ```batch
+    REG DELETE "HKCU\Control Panel\Desktop" /V PaintDesktopVersion /F
+    ```
+
 ## Shell folders
 Changes location of Shell Folders: Documents, Pictures, Videos, Music, Desktop, Downloads
 
@@ -153,3 +172,24 @@ Changes location of Shell Folders: Documents, Pictures, Videos, Music, Desktop, 
     ```batch
     REG add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "{7D83EE9B-2244-4E70-B1F5-5393042AF1E4}" /t REG_EXPAND_SZ /d ${VALUE} /f
     ```
+
+## Context Menu
+
+### Classic context menus (Windows 11)
+
+Restores the classic (pre-Windows 11) context menus.
+
+System default: `Disabled`
+
+=== "Enabled"
+
+    ```batch
+    REG add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve"
+    ```
+=== "Disabled"
+
+    ```batch
+    REG delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f"
+    ```
+
+

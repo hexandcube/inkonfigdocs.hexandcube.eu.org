@@ -1,10 +1,10 @@
 site_name: Inkonfig Docs
-site_url: https://docs.inkonfig.tk
+site_url: https://inkonfigdocs.hexandcube.eu.org
 repo_url: https://github.com/hexandcube/inkonfig
 repo_name: GitHub
 site_description: Documentation for Inkonfig - A Windows configuration script generator
 site_author: Hexandcube
-copyright: Copyright © 2021 Hexandcube 
+copyright: Copyright © 2020 - 2022 Hexandcube 
 markdown_extensions:
   - admonition
   - attr_list
@@ -35,4 +35,4 @@ theme:
     - navigation.top
     - search.suggest
   palette:
-    primary: blue
+    primary: indigo

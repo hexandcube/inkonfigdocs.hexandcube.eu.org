@@ -1,5 +1,14 @@
 # Changelog
 
+## Inkonfig v.1.2.0
+### Added
+- Added an option to restore classic context menus (pre-Windows 11)
+- Added an option to show Windows version watermark on desktop
+
+### Changed
+- Updated dependencies
+- Updated docs URL in the header
+
 ## Inkonfig v.1.1.0
 
 ### Added
