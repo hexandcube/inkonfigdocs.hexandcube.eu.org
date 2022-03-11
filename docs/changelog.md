@@ -1,5 +1,13 @@
 # Changelog
 
+## Inkonfig v.1.2.1
+
+### Changed
+
+- Updated dependencies
+- Added License and Code of Conduct
+- Updated footer
+
 ## Inkonfig v.1.2.0
 ### Added
 - Added an option to restore classic context menus (pre-Windows 11)
