@@ -29,26 +29,7 @@ System default: `Hidden`
     REG add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v HideFileExt /t REG_DWORD /d 1 /f
     ```
 
-### Hibernation
-Toggles the Hibernation power option.
-
-System default: `Disabled`
-
-=== "Enabled"
-
-    ```batch
-    powercfg -H ON
-    ```
-=== "Disabled"
-
-    ```batch
-    powercfg -H OFF
-    ```
-
 ### Seconds in the taskbar clock
-
-!!! warning "Not supported on Windows 11"
-    This feature doesn't work on Windows 11. [Visit the releated Feedback Hub post](https://aka.ms/AAd8div).
 
 Toggles the visibility of seconds in the taskbar clock.
 
@@ -177,7 +158,7 @@ Changes location of Shell Folders: Documents, Pictures, Videos, Music, Desktop, 
 
 ### Classic context menus (Windows 11)
 
-Restores the classic (pre-Windows 11) context menus.
+Restores the classic (pre-Windows 11) context menus. This option doesn't affect PCs running Windows 10.
 
 System default: `Disabled`
 
@@ -191,5 +172,3 @@ System default: `Disabled`
     ```batch
     REG delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f"
     ```
-
-

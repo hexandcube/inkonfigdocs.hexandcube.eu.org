@@ -14,6 +14,7 @@ Inkonfig Wizard should work on any modern browser.
 ## Reporting bugs and suggesting features
 
 [Go to Issues](https://github.com/hexandcube/Inkonfig/issues){ .md-button }
+
 ## Trademark Notice
 Windows®, Windows 10® and Windows 11® are registered trademarks
 of Microsoft Corporation in the United States and other countries.
